@@ -30,7 +30,7 @@ public class Frankenstein : MonoBehaviour {
 
 	void HandleMovement() {
 		float step = moveSpeed * Time.fixedDeltaTime;
-		transform.position = Vector2.MoveTowards (transform.position, target.position, step);
+		transform.position = Vector3.MoveTowards (transform.position, target.position, step);
 
 		float horizontal = 0;
 
