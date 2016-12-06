@@ -9,9 +9,6 @@ public class Frankenstein : MonoBehaviour {
 
 	private bool facingRight;
 
-	public float hp;
-	public float damage;
-
 	// Use this for initialization
 	void Start () {
 		//myRigidBody = GetComponent<Rigidbody2D> ();
@@ -25,7 +22,8 @@ public class Frankenstein : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		HandleMovement ();
+		if(target != null)
+			HandleMovement ();
 	}
 
 	void HandleMovement() {
@@ -54,10 +52,5 @@ public class Frankenstein : MonoBehaviour {
 			transform.localScale = spriteScale;
 		}
 	}
-
-	private void takeDamage(float d) {
-		hp -= d;
-	}
-
 
 }
