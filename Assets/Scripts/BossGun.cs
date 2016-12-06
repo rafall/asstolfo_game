@@ -21,13 +21,13 @@ public class BossGun : MonoBehaviour {
 			nextFire = Time.time + Random.Range (fireRatep, fireRatem);
 			GameObject boss = GameObject.Find ("Boss");
 			Animator boss_atack = boss.GetComponent<Animator> ();
-			boss_atack.SetTrigger ("boss_atack");
+			boss_atack.SetTrigger ("boss_attack");
 			Invoke ("FireEnemyBullet", 1f);
 		}
 	}
 
 	void FireEnemyBullet() {
-		GameObject playerShip = GameObject.Find ("PlayerGO");
+		GameObject playerShip = GameObject.Find ("Player");
 
 		if (playerShip != null) {
 			GameObject bullet = (GameObject)Instantiate (EnemyBulletGO);
