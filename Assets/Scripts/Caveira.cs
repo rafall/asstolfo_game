@@ -17,7 +17,8 @@ public class Caveira : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		HandleMovement ();
+		if(gameObject != null)
+			HandleMovement ();
 	}
 
 	void HandleMovement() {

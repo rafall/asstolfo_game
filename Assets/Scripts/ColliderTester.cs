@@ -6,14 +6,16 @@ public class ColliderTester : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log (gameObject.name + " foi trigado por " + other.gameObject.name);
 
-		if (gameObject.tag == "EnemyProjectile" &&
-			other.gameObject.tag == "Player") {
+		if (gameObject.tag == "Player" &&
+			other.gameObject.tag == "EnemyProjectile") {
 
-			causeDamage (gameObject, other.gameObject);
+			causeDamage (other.gameObject, gameObject);
+
 		} else if(gameObject.tag == "PlayerProjectile" &&
 			other.gameObject.tag == "Enemy") {
 
 			causeDamage (gameObject, other.gameObject);
+
 		} else if(gameObject.tag == "Player" &&
 			other.gameObject.tag == "Enemy") {
 
