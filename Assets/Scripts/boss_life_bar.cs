@@ -5,7 +5,8 @@ using UnityEngine;
 public class boss_life_bar : MonoBehaviour {
 
 	public float boss_hp;
-
+	private float boss_max_hp = 100;
+	private float life_bar_x_position;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,8 +18,14 @@ public class boss_life_bar : MonoBehaviour {
 		
 		Health boss = GameObject.Find ("Boss").GetComponent<Health>();
 		boss_hp = boss.health;
-		Debug.Log ("Boss HP" + boss_hp);
-		gameObject.transform.localScale = new Vector3(boss_hp * 2, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-	
+		//Debug.Log ("Boss HP" + boss_hp);
+		RectTransform rect = gameObject.GetComponent<RectTransform> ();
+		rect.sizeDelta = new Vector2 (boss_hp * 2,20);
+
+		life_bar_x_position = (boss_hp - boss_max_hp);
+		Debug.Log ("Position x: " + life_bar_x_position);
+		rect.position = new Vector3 ((float) 344.5 + life_bar_x_position, 
+									rect.position.y, 
+									rect.position.z);	
 	}
 }
