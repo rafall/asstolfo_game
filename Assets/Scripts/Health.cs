@@ -17,6 +17,9 @@ public class Health : MonoBehaviour {
 			if (gameObject.name == "Player") {
 				Application.LoadLevel("GameOver");
 			}
+			if (gameObject.name == "Boss") {
+				Application.LoadLevel("End");
+			}
 			go = GameObject.FindGameObjectWithTag ("Stage");
 			if (go != null) {
 				int num = go.GetComponent<StageController>().numOfMonsters;

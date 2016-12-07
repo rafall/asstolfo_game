@@ -16,6 +16,7 @@ public class Intro_Video : MonoBehaviour {
 	
     public void OrMouseDown()
     {
+		Debug.Log ("Skip");
         ((MovieTexture)GetComponent<Renderer>().material.mainTexture).Stop();
         Application.LoadLevel(nextLevel);
     }
@@ -26,5 +27,10 @@ public class Intro_Video : MonoBehaviour {
         {
             Application.LoadLevel(nextLevel);
         }
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			((MovieTexture)GetComponent<Renderer>().material.mainTexture).Stop();
+			Application.LoadLevel(nextLevel);
+		}
 	}
 }
