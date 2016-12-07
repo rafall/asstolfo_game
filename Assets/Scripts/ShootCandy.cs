@@ -34,7 +34,7 @@ public class ShootCandy : MonoBehaviour {
 
 			if (shotCounter <= 0) {
 				shotCounter = timeBetweenShots;
-				Instantiate (bullet, firePoint.position, firePoint.rotation);
+				
 				Bullet newBullet = Instantiate (bullet, firePoint.position, firePoint.rotation) as Bullet;
 				newBullet.speed = bulletSpeed;
 			}
