@@ -29,7 +29,7 @@ public class IntroSubtitle: MonoBehaviour {
 		text[7] = "CORRENDO PARA UMA CASA ABANDONADA";
 		text[8] = "COMO ASSTOLFO TEM VERGONHA DO SEU ROSTO";
 		text[9] = "ELE TIROU AS BALAS DO SEU SAQUINHO DE PAPEL";
-		text[10] = "E ENCONBRIU SUA FACE COM ELE";
+		text[10] = "E ENCOBRIU SUA FACE COM ELE";
 		text[11] = "E AGORA?";
 		text[12] = "O QUE FAZER?";
 		text[13] = "ATERRORIZADO, ELE DECIDE SEGUIR O DESCONHECIDO...";

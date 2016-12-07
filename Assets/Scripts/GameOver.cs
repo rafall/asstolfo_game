@@ -15,6 +15,6 @@ public class GameOver : MonoBehaviour {
 
 	IEnumerator GoToTitle() {
 		yield return new WaitForSeconds (5f);
-		Application.LoadLevel("GameTitle");
+		Application.LoadLevel("Transition1");
 	}
 }

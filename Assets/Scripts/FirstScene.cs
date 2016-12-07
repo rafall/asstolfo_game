@@ -5,7 +5,7 @@ public class FirstScene : MonoBehaviour {
 
 	public void GoToLevel(int level)
 	{
-		Application.LoadLevel (level);
+            Application.LoadLevel(level);
 	}
 	public void Exit() {
 		Debug.Log ("Fechando");
