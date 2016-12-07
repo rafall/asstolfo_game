@@ -24,8 +24,7 @@ public class boss_life_bar : MonoBehaviour {
 
 		life_bar_x_position = (boss_hp - boss_max_hp);
 		Debug.Log ("Position x: " + life_bar_x_position);
-		rect.position = new Vector3 ((float) 344.5 + life_bar_x_position, 
-									rect.position.y, 
-									rect.position.z);	
+
+		rect.anchoredPosition = new Vector2 (life_bar_x_position, rect.anchoredPosition.y);	
 	}
 }
