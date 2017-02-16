@@ -21,17 +21,15 @@ public class ShootCandy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if(Input.GetMouseButtonDown(0)) {
-			Debug.Log ("Clicou");
+		if(Input.GetMouseButton(0)) {
 			isFiring = true;
-		}
-		if(Input.GetMouseButtonUp(0)) {
+		} else {
 			isFiring = false;
 		}
-		shotCounter -= Time.deltaTime;
-		if (isFiring) {
-			Debug.Log ("Atiraaaaa");
 
+		shotCounter -= Time.deltaTime;
+
+		if (isFiring) {
 			if (shotCounter <= 0) {
 				shotCounter = timeBetweenShots;
 				
